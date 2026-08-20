@@ -1,0 +1,95 @@
+:root{
+    --accent-color: yellow;
+    --content-color: green;
+    --text-light: black;
+    --table-header: rgb(112, 187, 201);
+    --hover-color: white;
+    --cancelled-color: rgba(255, 0, 0, 0.616);
+    --confirmed-color: rgba(0, 255, 0, 0.555);
+    --pending-color: rgba(255, 255, 0, 0.589);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: arial;
+    background-color: rgb(212, 136, 166);
+}
+
+p{
+    font-size: 18px;
+    margin: 10px;
+}
+
+
+/*Table Basic Style*/
+table{
+    width: 95%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+th, td{
+    border: 1px solid var(--text-light);
+    font-size: 14px;
+    text-align: left;
+    padding: 10px;
+}
+
+th{
+    background-color: var(--accent-color);
+}
+
+.scheduleTable th{
+    background-color: var(--accent-color);
+    text-align: center;
+}
+
+.scheduleTable td{
+    background-color: var(--content-color);
+}
+
+.styledTable th{
+    background-color: var(--table-header);
+    text-align: center;
+    padding: 25px;
+}
+
+.styledTable thead th:nth-child(odd)
+{
+    width: 25%;
+}
+
+/*zebra stripping*/
+.styledTable tbody tr:nth-child(even){
+    background-color: var(--content-color);
+}
+
+.styledTable tbody tr:nth-child(odd){
+    background-color: var(--accent-color);
+}
+
+.styledTable tbody tr:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+.confirmed{
+    background-color: var(--confirmed-color)
+}
+
+.cancelled{
+    background-color: var(--cancelled-color)
+}
+
+.pending{
+    background-color: var(--pending-color)
+}
+
